@@ -11,7 +11,7 @@
 #include <vector>
 #include <thread>
 
-
+//here we used this for MacOS system configuration because in my system used arm64 .
 #if defined(__x86_64__) || defined(__i386__)
 #include <immintrin.h>
 #endif
@@ -59,7 +59,8 @@ void executeTrades() {
             }
 
             switch (choice) {
-            case 1: {  // Place Order
+        // Place Order
+            case 1: { 
                 std::cout << "Enter instrument name (e.g., BTC-PERPETUAL): ";
                 std::cin >> instrument_name;
                 std::cout << "Enter amount: ";
@@ -99,8 +100,8 @@ void executeTrades() {
                 }
                 break;
             }
-
-            case 2: {  // Cancel Order
+         // Cancel Order
+            case 2: { 
                 std::cout << "Enter order ID to cancel: ";
                 std::cin >> order_id;
 
@@ -127,8 +128,8 @@ void executeTrades() {
                 }
                 break;
             }
-
-            case 3: {  // Modify Order
+         // Modify Order
+            case 3: { 
                 std::cout << "Enter order ID to modify: ";
                 std::cin >> order_id;
                 std::cout << "Enter new price: ";
@@ -152,8 +153,8 @@ void executeTrades() {
                 }
                 break;
             }
-
-            case 4: {  // Get Order Book
+       // Get Order Book
+            case 4: {  
                 std::cout << "Enter instrument name to view order book (e.g., BTC-PERPETUAL): ";
                 std::cin >> instrument_name;
 
@@ -168,8 +169,8 @@ void executeTrades() {
                 }
                 break;
             }
-
-            case 5: {  // View Position for Specific Instrument
+      // View Position for Specific Instrument
+            case 5: {  
                 std::string instrument_name;
                 std::cout << "Enter instrument name (e.g., BTC-PERPETUAL): ";
                 std::cin >> instrument_name;
@@ -185,8 +186,8 @@ void executeTrades() {
                 }
                 break;
             }
-
-            case 6: {  // Subscribe to Order Book
+         // Subscribe to Order Book
+            case 6: { 
                 std::cout << "Enter instrument name to subscribe (e.g., BTC-PERPETUAL): ";
                 std::cin >> instrument_name;
                 
@@ -229,31 +230,6 @@ void executeTrades() {
                 }
                 break;
             }
-
-            // case 7: {  // Display Cached Orders
-            //     if (order_cache.empty()) {
-            //         std::cout << "\nNo active orders in cache.\n";
-            //     } else {
-            //         std::cout << "\n=== Active Orders ===\n";
-            //         for (const auto& [order_id, order_info] : order_cache) {
-            //             std::cout << "\nOrder ID: " << order_id;
-            //             if (order_info.contains("instrument_name")) {
-            //                 std::cout << "\nInstrument: " << order_info["instrument_name"];
-            //             }
-            //             if (order_info.contains("price")) {
-            //                 std::cout << "\nPrice: " << order_info["price"];
-            //             }
-            //             if (order_info.contains("amount")) {
-            //                 std::cout << "\nAmount: " << order_info["amount"];
-            //             }
-            //             if (order_info.contains("order_state")) {
-            //                 std::cout << "\nState: " << order_info["order_state"];
-            //             }
-            //             std::cout << "\n-------------------\n";
-            //         }
-            //     }
-            //     break;
-            // }
 
             default:
                 std::cout << "Invalid choice. Please try again.\n";
