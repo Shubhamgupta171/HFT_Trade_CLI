@@ -5,12 +5,19 @@ A high frequency and low latency command-line application for trading on the Der
 ## Features
 
 1.Connects to Deribit API v2 in real-time using WebSocket
+
 2.Fast order execution and market data updates
+
 3.Manage orders (place, cancel, modify)
+
 4.Monitor live order books
+
 5.Check current trading positions
+
 6.Subscribe to live market data
+
 7.Built with modern C++17 for speed and reliability
+
 8.Optimized for low-latency performance
 
 ## Prerequisites
