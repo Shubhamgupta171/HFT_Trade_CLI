@@ -1,7 +1,6 @@
 # Deribit Trading CLI Application
 
 A high frequency and low latency command-line application for trading on the Deribit cryptocurrency exchange using C++17 and Boost.
-
 ## Features
 
 1.Connects to Deribit API v2 in real-time using WebSocket
