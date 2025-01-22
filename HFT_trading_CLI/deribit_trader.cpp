@@ -83,16 +83,6 @@ void executeTrades() {
                         const auto& result = buy_response["result"];
                         std::cout << "Result section: " << result.dump(2) << std::endl;
                         
-                    //     if (result.contains("order_id")) {
-                    //         std::string order_id = result["order_id"].get<std::string>();
-                    //         order_cache[order_id] = result;
-                    //         std::cout << "Successfully cached order with ID: " << order_id << std::endl;
-                    //         std::cout << "Cache size is now: " << order_cache.size() << std::endl;
-                    //     } else {
-                    //         std::cout << "No order_id in result" << std::endl;
-                    //     }
-                    // } else {
-                    //     std::cout << "No result section in response" << std::endl;
                     }
                 }
                 catch (const std::exception& e) {
