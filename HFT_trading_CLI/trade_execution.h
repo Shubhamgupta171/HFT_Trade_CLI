@@ -18,7 +18,6 @@ public:
    explicit TradeExecution(WebSocketHandler& websocket); 
    ~TradeExecution();
 
-   
     json getOrderDetails(const std::string& order_id);
     json authenticate(const std::string& client_id, const std::string& client_secret);
     json getInstruments(const std::string& currency, const std::string& kind, bool expired);
