@@ -1,37 +1,37 @@
 # Deribit Trading CLI Application
 
-A high-performance, low-latency command-line trading interface for Deribit cryptocurrency exchange using C++17 and Boost.
+A high frequency and low latency command-line application for trading on the Deribit cryptocurrency exchange using C++17 and Boost.
 
 ## Features
 
-- Real-time WebSocket connection to Deribit API v2
-- Low-latency order execution and market data streaming
-- Comprehensive order management (place, cancel, modify)
-- Real-time order book monitoring
-- Position tracking
-- Market data subscription system
-- Built with modern C++17 features
-- Optimized for performance with minimal latency
+1.Connects to Deribit API v2 in real-time using WebSocket
+2.Fast order execution and market data updates
+3.Manage orders (place, cancel, modify)
+4.Monitor live order books
+5.Check current trading positions
+6.Subscribe to live market data
+7.Built with modern C++17 for speed and reliability
+8.Optimized for low-latency performance
 
 ## Prerequisites
 
 Install required dependencies on Ubuntu:
 
 ```bash
-# Update package list
-sudo apt update
+# Update Homebrew
+brew update
 
-# Install build essentials and cmake
-sudo apt install -y build-essential cmake
+# Install CMake
+brew install cmake
 
 # Install Boost libraries
-sudo apt install -y libboost-all-dev
+brew install boost
 
 # Install OpenSSL
-sudo apt install -y libssl-dev
+brew install openssl
 
 # Install nlohmann-json
-sudo apt install -y nlohmann-json3-dev
+brew install nlohmann-json
 ```
 
 ## Building the Project
@@ -39,7 +39,7 @@ sudo apt install -y nlohmann-json3-dev
 1. Clone the repository:
 ```bash
 git clone <repository-url>
-cd deribit-trading-cli
+cd HFT_trading_CLI
 ```
 
 2. Create build directory:
@@ -65,13 +65,19 @@ Execute the built binary:
 
 The application provides a command-line interface with the following options:
 
-1. Place Order - Create new market or limit orders
-2. Cancel Order - Cancel existing orders by ID
-3. Modify Order - Update price/quantity of existing orders
-4. Get Order Book - View current market depth
-5. View Current Positions - Check open positions
-6. Subscribe to Order Book Updates - Real-time market data
-7. Exit
+1. Place Order - Create a new market or limit order by specifying the details.
+
+2.Cancel Order - Cancel an existing order by providing its ID.
+
+3.Modify Order - Update the price or quantity of an existing order.
+
+4.Get Order Book - View the current market order book.
+
+5.View Current Positions - Check your open trading positions.
+
+6.Subscribe to Order Book Updates - Receive real-time updates about the market.
+
+7.Exit - Quit the application.
 
 ## Performance Features
 
